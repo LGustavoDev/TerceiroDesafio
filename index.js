@@ -1,6 +1,5 @@
 const readline = require('readline');
 
-// Função para calcular o nível do jogador
 function calcularNivel(vitorias, derrotas) {
     let saldo = vitorias - derrotas;
     let nivel = '';
@@ -29,8 +28,8 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question('Digite a quantidade de vitórias: ', (vitorias) => {
-    rl.question('Digite a quantidade de derrotas: ', (derrotas) => {
+rl.question('Digite o número de vitórias: ', (vitorias) => {
+    rl.question('Digite o número de derrotas: ', (derrotas) => {
         const resultado = calcularNivel(parseInt(vitorias), parseInt(derrotas));
         console.log(resultado);
         rl.close();
